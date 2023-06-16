@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <!-- Fontawesome_Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        .card {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            width: 280px;
+            /* Adjust as per your card width */
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 20px;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <title>Aman Koushal | Portfolio</title>
+</head>
+
+<body style="overflow-x: hidden;">
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!--                                                                         - Navbar Section                                                                          -->
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <nav class="bg-nav_color dark:bg-bg_color transition-colors duration-500 shadow-2xl shadow-black">
+        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-6">
+            <div class="flex justify-between h-20 items-center">
+
+                <!--- Navbar logo -->
+                <div class="flex-shrink-0 flex items-center justify-center">
+                    <a href="">
+                        <i class="mr-4 fa fa-laptop-code text-indigo-500 font-thin text-3xl"></i>
+                        <a href="#" class="text-indigo-500 text-3xl font-medium">Aman</a>
+                    </a>
+                </div>
+
+                <!--- Navbar {lg:} -->
+                <div class="hidden md:block ml-auto mr-4">
+                    <div class="flex items-center space-x-4">
+                        <a href="#"
+                            class="text-indigo-500 rounded-md text-lg font-medium transition duration-150 ease-in-out underline-on-hover">Home</a>
+                        <a href="#"
+                            class="text-gray-700 dark:text-white hover:text-indigo-500 rounded-md text-lg font-medium transition duration-150 ease-in-out underline-on-hover">About</a>
+                        <a href="#"
+                            class="text-gray-700 dark:text-white hover:text-indigo-500 rounded-md text-lg font-medium transition duration-150 ease-in-out underline-on-hover">Portfolio</a>
+                        <a href="#"
+                            class="text-gray-700 dark:text-white hover:text-indigo-500 rounded-md text-lg font-medium transition duration-150 ease-in-out underline-on-hover">Contact</a>
+                    </div>
+                </div>
+
+
+                <div class="flex justify-between sm:justify-start items-center">
+
+                    <!--- Theme Switching Button {Navbar lg:} -->
+                    <div class="flex mr-2">
+                        <button id="darkModeBtn" class="flex dark-mode-button">
+                            <span
+                                class="material-icons font-bold text-gray-500 hover:text-indigo-500 text-2xl">light_mode</span>
+                        </button>
+                    </div>
+
+                    <!--- Hamburger Menu -->
+                    <div class="-mr-2 flex items-center md:hidden text-white rounded-md bg-indigo-500">
+                        <button id="mofale-menu-button" type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md  focus:outline-none text-white transition duration-150 ease-in-out"
+                            aria-label="Main menu" aria-expanded="false">
+                            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--- Navbar {sm:} -->
+        <div class="hidden md:hidden" id="mofale-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 items-center">
+                <a href="#"
+                    class="text-slate-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-center">Home</a>
+                <a href="#"
+                    class="text-slate-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-center">About</a>
+                <a href="#"
+                    class="text-slate-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-center">Portfolio</a>
+                <a href="#"
+                    class="text-slate-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-center">Contact</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!--                                                                          - Hero Section                                                                           -->
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="bg-bg_light dark:bg-bg_dark">
+        <div class="grid grid-cols-1 sm:grid-cols-2 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-6">
+
+            <!--- Hero Section Text -->
+            <div id="text" class="my-auto mx-2 ">
+                <h3 class="text-slate-400 my-2 font-bold text-lg">HELLO</h3>
+
+                <!--- Animated Text DIV -->
+                <div id="animation-text-div" class="text-5xl text-primary_text dark:text-white">
+                    <h2 class="my-3">
+                        <span class="font-light">I'm </span>
+                        <span class="font-bold">Aman</span>
+                    </h2>
+
+                    <!-- Animated Text -->
+                    <div class="flex items-center my-3">
+                        <h2 class="py-auto mr-2 font-bold">a</h2>
+                        <h2 id="animatedText" class="animated-text"></h2>
+                    </div>
+                </div>
+
+
+                <!--- Paragraph -->
+                <div class="my-10">
+                    <p class="text-slate-500 dark:text-slate-400 text-lg sm:text-xl">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Provident, excepturi. Distinctio accusantium fugit odit? Fugit
+                        ipsam. Sed ac fringilla ex. Nam mauris velit, ac cursus quis, non leo.</p>
+                </div>
+
+                <!--- Hero Section Buttons -->
+                <div class="my-auto space-y-4">
+                    <button
+                        class="text-lg sm:text-xl font-normal px-8 py-3 rounded-xl transition-colors duration-500 bg-indigo-500 border border-indigo-500 hover:bg-indigo-600 text-white">Hire
+                        me</button>
+                    <button
+                        class="text-lg sm:text-xl font-normal px-8 py-3 rounded-xl transition-colors duration-500 bg-transparent border border-indigo-500 hover:bg-indigo-500 text-indigo-500 hover:text-white">Portfolio</button>
+                </div>
+            </div>
+
+            <!--- Hero Section Image -->
+            <div id="hero-img" class="my-12 mx-2">
+                <img src="/src/images/hero-section-img.png"
+                    class="w-auto sm:h-screen md:h-[40rem] lg:h-[48rem] mx-auto object-contain" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!--                                                                          - About Section                                                                          -->
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="bg-white dark:bg-bg_color">
+        <div class="grid grid-cols-1 sm:grid-cols-2 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-6">
+
+            <!--- Image DIV -->
+            <div id="about-img" class="my-12 mx-2 ">
+                <img src="/src/images/myphoto.png" alt="" class="sm:h-screen md:h-[32rem] lg:h-[40rem] object-contain">
+            </div>
+            <div id="text" class="my-auto mx-2 ">
+                <h3 class="text-slate-400 my-2 font-bold text-lg">
+                    WHO AM I?</h3>
+
+                <!--- Text DIV -->
+                <div id="animation-text-div" class="text-4xl text-primary_text dark:text-white">
+                    <h2 class="my-3">
+                        <span class=" font-normal">I'm Aman Koushal, a visual UI/UX Designer and Web Developer</span>
+                    </h2>
+                </div>
+
+                <!--- Paragraph -->
+                <div class="my-10">
+                    <p class="text-slate-500 dark:text-slate-400 text-lg sm:text-xl">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Provident, excepturi. Distinctio accusantium fugit odit? Fugit
+                        ipsam. Sed ac fringilla ex. Nam mauris velit, ac cursus quis, non leo.</p>
+                </div>
+
+                <div class="my-10 space-y-4">
+                    <button
+                        class="text-lg mx-2 sm:text-xl font-normal px-8 py-3 rounded-xl transition-colors duration-500 bg-indigo-500 border border-indigo-500 hover:bg-indigo-600 text-white">Download
+                        CV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!--                                                                         - Resume Section                                                                          -->
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="bg-bg_light dark:bg-bg_dark">
+        <div class="grid max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-6">
+            <div id="text" class=" mx-2 my-10">
+                <h3 class="text-slate-400 my-2 font-bold text-lg">
+                    MY RESUME</h3>
+
+                <!--- Text DIV -->
+                <div id="animation-text-div" class="text-4xl text-primary_text dark:text-white">
+                    <h2 class="my-3">
+                        <span class=" font-normal">I Would Love to make your Ideas real</span>
+                    </h2>
+                </div>
+
+                <!--- Paragraph -->
+                <div class="my-10">
+                    <p class="text-slate-500 dark:text-slate-400 text-lg sm:text-xl">LI love graphic design and
+                        photography and have been working on my portfolio since 2016. You can download my resume in
+                        order to learn the details of my professional life as a designer and photographer. Contact me
+                        and we will discuss your projects!</p>
+                </div>
+
+                <div class="my-10 space-y-4">
+                    <button
+                        class="text-lg mx-2 sm:text-xl font-normal px-8 py-3 rounded-xl transition-colors duration-500 bg-indigo-500 border border-indigo-500 hover:bg-indigo-600 text-white">Download
+                        CV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!--                                                                         - Service Section                                                                         -->
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="bg-bg_white dark:bg-bg_color">
+        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-6 overflow-x-auto">
+            <div class="my-10">
+                <div id="text" class=" mx-2 my-10 text-center">
+                    <h3 class="text-slate-400 my-2 font-bold text-lg">
+                        SERVICES</h3>
+
+                    <!--- Text DIV -->
+                    <div id="animation-text-div" class="text-4xl text-primary_text dark:text-white">
+                        <h2 class="my-3">
+                            <span class=" font-semibold">What i do for you</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-center items-center">
+                    <div
+                        class="m-4 select-none dark:hover:bg-bg_color hover:bg-white dark:bg-bg_dark bg-bg_light  border-2 dark:border-bg_dark border-bg_light rounded-xl md:h-auto lg:h-auto w-auto transition-colors duration-500">
+                        <div class="flex items-center justify-between m-4">
+                            <div class="grid  grid-rows-2 items-center">
+                                <div class="mr-2">
+                                    <i class="fas fa-pencil text-3xl text-indigo-500"></i>
+                                </div>
+                                <h3 class="font-semibold text-3xl text-primary_text dark:text-white">Graphic Designing</h3>
+                            </div>
+                            <h1 class="text-6xl font-normal dark:text-number text-gray-300">01</h1>
+                        </div>
+                        <div class="m-4 text-gray-400">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat impedit consequatur
+                                cupiditate maiores quibusdam velit similique harum enim,</p>
+                        </div>
+
+                        <div class="m-4">
+                            <a class="dark:text-white text-gray-800 hover:text-indigo-500 underline1 transition-colors duration-500 font-semibold" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="m-4 select-none dark:hover:bg-bg_color hover:bg-white dark:bg-bg_dark bg-bg_light  border-2 dark:border-bg_dark border-bg_light rounded-xl md:h-auto lg:h-auto w-auto transition-colors duration-500">
+                        <div class="flex items-center justify-between m-4">
+                            <div class="grid  grid-rows-2 items-center">
+                                <div class="mr-2">
+                                    <i class="fas fa-pencil text-3xl text-indigo-500"></i>
+                                </div>
+                                <h3 class="font-semibold text-3xl text-primary_text dark:text-white">UI/UX Designing</h3>
+                            </div>
+                            <h1 class="text-6xl font-normal dark:text-number text-gray-300">01</h1>
+                        </div>
+                        <div class="m-4 text-gray-400">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat impedit consequatur
+                                cupiditate maiores quibusdam velit similique harum enim,</p>
+                        </div>
+
+                        <div class="m-4">
+                            <a class="dark:text-white text-gray-800 hover:text-indigo-500 underline1 transition-colors duration-500 font-semibold" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="m-4 select-none dark:hover:bg-bg_color hover:bg-white dark:bg-bg_dark bg-bg_light  border-2 dark:border-bg_dark border-bg_light rounded-xl md:h-auto lg:h-auto w-auto transition-colors duration-500">
+                        <div class="flex items-center justify-between m-4">
+                            <div class="grid  grid-rows-2 items-center">
+                                <div class="mr-2">
+                                    <i class="fas fa-pencil text-3xl text-indigo-500"></i>
+                                </div>
+                                <h3 class="font-semibold text-3xl text-primary_text dark:text-white">Web Development</h3>
+                            </div>
+                            <h1 class="text-6xl font-normal dark:text-number text-gray-300">01</h1>
+                        </div>
+                        <div class="m-4 text-gray-400">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat impedit consequatur
+                                cupiditate maiores quibusdam velit similique harum enim,</p>
+                        </div>
+
+                        <div class="m-4">
+                            <a class="dark:text-white text-gray-800 hover:text-indigo-500 underline1 transition-colors duration-500 font-semibold" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="m-4 select-none dark:hover:bg-bg_color hover:bg-white dark:bg-bg_dark bg-bg_light  border-2 dark:border-bg_dark border-bg_light rounded-xl md:h-auto lg:h-auto w-auto transition-colors duration-500">
+                        <div class="flex items-center justify-between m-4">
+                            <div class="grid  grid-rows-2 items-center">
+                                <div class="mr-2">
+                                    <i class="fas fa-pencil text-3xl text-indigo-500"></i>
+                                </div>
+                                <h3 class="font-semibold text-3xl text-primary_text dark:text-white">Research & Analysis</h3>
+                            </div>
+                            <h1 class="text-6xl font-normal dark:text-number text-gray-300">01</h1>
+                        </div>
+                        <div class="m-4 text-gray-400">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat impedit consequatur
+                                cupiditate maiores quibusdam velit similique harum enim,</p>
+                        </div>
+
+                        <div class="m-4">
+                            <a class="dark:text-white text-gray-800 hover:text-indigo-500 underline1 transition-colors duration-500 font-semibold" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="m-4 select-none dark:hover:bg-bg_color hover:bg-white dark:bg-bg_dark bg-bg_light  border-2 dark:border-bg_dark border-bg_light rounded-xl md:h-auto lg:h-auto w-auto transition-colors duration-500">
+                        <div class="flex items-center justify-between m-4">
+                            <div class="grid  grid-rows-2 items-center">
+                                <div class="mr-2">
+                                    <i class="fas fa-pencil text-3xl text-indigo-500"></i>
+                                </div>
+                                <h3 class="font-semibold text-3xl text-primary_text dark:text-white">Project Management</h3>
+                            </div>
+                            <h1 class="text-6xl font-normal dark:text-number text-gray-300">01</h1>
+                        </div>
+                        <div class="m-4 text-gray-400">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat impedit consequatur
+                                cupiditate maiores quibusdam velit similique harum enim,</p>
+                        </div>
+
+                        <div class="m-4">
+                            <a class="dark:text-white text-gray-800 hover:text-indigo-500 underline1 transition-colors duration-500 font-semibold" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="m-4 select-none dark:hover:bg-bg_color hover:bg-white dark:bg-bg_dark bg-bg_light  border-2 dark:border-bg_dark border-bg_light rounded-xl md:h-auto lg:h-auto w-auto transition-colors duration-500">
+                        <div class="flex items-center justify-between m-4">
+                            <div class="grid  grid-rows-2 items-center">
+                                <div class="mr-2">
+                                    <i class="fas fa-pencil text-3xl text-indigo-500"></i>
+                                </div>
+                                <h3 class="font-semibold text-3xl text-primary_text dark:text-white">Graphic Designing</h3>
+                            </div>
+                            <h1 class="text-6xl font-normal dark:text-number text-gray-300">01</h1>
+                        </div>
+                        <div class="m-4 text-gray-400">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat impedit consequatur
+                                cupiditate maiores quibusdam velit similique harum enim,</p>
+                        </div>
+
+                        <div class="m-4">
+                            <a class="dark:text-white text-gray-800 hover:text-indigo-500 underline1 transition-colors duration-500 font-semibold" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!--                                                                             - Scripts                                                                             -->
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <script>
+        const texts = ["UI/UX Designer", "Web Developer", "Freelancer"];
+        const animatedText = document.getElementById("animatedText");
+        let currentIndex = 0;
+
+        function typeWriter() {
+            const text = texts[currentIndex];
+            let index = 0;
+            animatedText.textContent = "";
+
+            function type() {
+                if (index < text.length) {
+                    animatedText.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, 200);
+                } else {
+                    setTimeout(changeText, 2000);
+                }
+            }
+
+            type();
+        }
+
+        function changeText() {
+            currentIndex = (currentIndex + 1) % texts.length;
+            typeWriter();
+        }
+
+        changeText();
+
+    </script>
+
+    <script> // Hamburger Menu Toggler
+        const menuToggle = document.getElementById('mofale-menu-button');
+        const menuItems = document.getElementById('mofale-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            menuItems.classList.toggle('hidden');
+        });
+    </script>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const icon = document.querySelector('#darkModeBtn .material-icons');
+
+            body.classList.toggle('dark');
+            icon.textContent = body.classList.contains('dark') ? 'brightness_7' : 'brightness_4';
+
+            localStorage.theme = body.classList.contains('dark') ? 'dark' : 'light';
+        }
+
+        function checkThemePreference() {
+            const body = document.body;
+            const icon = document.querySelector('#darkModeBtn .material-icons');
+
+            const userPreference = localStorage.getItem('theme');
+            const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (userPreference === 'dark' || (!userPreference && systemPreference)) {
+                body.classList.add('dark');
+                icon.textContent = 'brightness_7';
+            } else {
+                body.classList.remove('dark');
+                icon.textContent = 'brightness_4';
+            }
+        }
+
+        const darkModeBtn = document.getElementById('darkModeBtn');
+        darkModeBtn.addEventListener('click', toggleDarkMode);
+
+        checkThemePreference();
+
+    </script>
+    <!-- Swiper JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
